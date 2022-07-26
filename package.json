@@ -1,0 +1,23 @@
+{
+  "name": "lifestyle",
+  "version": "1.0.0",
+  "description": "lifstyle let you get information about quality of life in the city you look for.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SimonaFabbri/Lifstyle-app.git"
+  },
+  "author": "simona fabbri",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SimonaFabbri/Lifstyle-app/issues"
+  },
+  "homepage": "https://github.com/SimonaFabbri/Lifstyle-app#readme",
+  "dependencies": {
+    "axios": "^0.27.2"
+  },
+  "devDependencies": {}
+}

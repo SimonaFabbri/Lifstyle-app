@@ -1,0 +1,22 @@
+body {
+  background-color: black;
+  margin-left: 100px;
+  margin-top: 80px;
+}
+.TextArea {
+  background-color: blanchedalmond;
+  border: solid 2px green;
+  padding: 20px;
+  height: 100px;
+  width: 400px;
+  font-size: 16px;
+}
+button {
+  background-color: blanchedalmond;
+  border: solid 2px green;
+  text-align: center;
+  height: 50px;
+  width: 200;
+  margin-left: 20px;
+  font-size: 16px;
+}
