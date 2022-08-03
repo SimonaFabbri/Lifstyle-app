@@ -9,12 +9,17 @@
   </head>
   <body>
     <input
-      class="TextArea"
+      id="cityInput"
       type="text"
       onClick="this.value='';"
       value="Write your city here"
     />
     <button id="button">Send</button>
+    <div id="wrapper">
+      <div style="color: white" id="container"></div>
+      <div style="color: white" id="scoreTeleport"></div>
+    </div>
   </body>
+  <script src="./node_modules/axios/dist/axios.min.js"></script>
   <script src="index.js"></script>
 </html>
