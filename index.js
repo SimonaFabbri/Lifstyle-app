@@ -31,7 +31,10 @@ getBtn.addEventListener("click", getData);
 const writeHTML = (resObject) => {
   summary.innerHTML = resObject.data.summary;
 
-  teleport.innerHTML = resObject.data.teleport_city_score.toFixed(2);
+  teleport.innerHTML =
+    "Teleport city score" +
+    " : " +
+    resObject.data.teleport_city_score.toFixed(2);
 
   let categories = resObject.data.categories;
 
