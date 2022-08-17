@@ -13,6 +13,9 @@ container.appendChild(categoriesNode);
 let errorMessage = document.createElement("p");
 container.appendChild(errorMessage);
 
+let loadingMessage = document.createElement("p");
+loadingMessage.innerHTML = "loading... ...";
+
 function resetUI() {
   summary.innerHTML = "";
   teleport.innerHTML = "";
@@ -23,13 +26,8 @@ function resetUI() {
 /* GET DATA */
 const getData = (e) => {
   e.preventDefault();
-
-  // ATTACCHI IL LOADER
-  attachLoader();
-
-  // mette in pausa per 2 secondi, DA TOGLIERE
-  sleep(2000);
   resetUI();
+  attachLoading();
   let city = document
     .getElementById("cityInput")
     .value.toLowerCase()
@@ -46,12 +44,20 @@ const getData = (e) => {
       writeError(error);
     })
     .finally(() => {
-      // TOGLIE IL LOADRE
+      removeLoading();
     });
 };
 
 form.addEventListener("submit", getData);
 /* WRITE HTML */
+const attachLoading = () => {
+  container.appendChild(loadingMessage);
+};
+
+const removeLoading = () => {
+  container.removeChild(loadingMessage);
+};
+
 const writeError = (errorObject) => {
   let error = errorObject.message;
   if (errorObject.code === "ERR_BAD_REQUEST") {
@@ -80,12 +86,3 @@ const writeHTML = (resObject) => {
   }
   categoriesNode.innerHTML = categoriesContent;
 };
-
-// DA TOGLIERE
-function sleep(milliseconds) {
-  const date = Date.now();
-  let currentDate = null;
-  do {
-    currentDate = Date.now();
-  } while (currentDate - date < milliseconds);
-}
