@@ -34,6 +34,8 @@ button {
   justify-content: center;
   align-items: center;
 }
-label {
+label,
+p,
+h1 {
   color: white;
 }
